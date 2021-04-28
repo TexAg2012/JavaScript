@@ -1,0 +1,8 @@
+	const RemoveDups = (arr, prop1, prop2) => arr.reduce((accumulator, currentValue) => {
+      if(!accumulator.find(obj => obj[prop1] === currentValue[prop1]) || !accumulator.find(obj => obj[prop2] === currentValue[prop2])){
+        accumulator.push(currentValue);
+      }
+      return accumulator;
+    }, [])
+    
+    //call by: var CleanData = RemoveDups(data, 'target', 'source');
